@@ -19,7 +19,8 @@ export async function GET() {
         products,
         users
       },
-      message: '✅ Database connected successfully to Neon PostgreSQL!'
+      message: '✅ Database connected successfully to Neon PostgreSQL!',
+      note: 'Counts may be 0 if database is empty'
     })
   } catch (error: any) {
     return NextResponse.json({

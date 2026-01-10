@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, Suspense } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { ProductCard } from '@/components/products/product-card'
@@ -131,7 +131,7 @@ const categories = [
   { id: '6', name: 'Accessories', slug: 'accessories' },
 ]
 
-export default function ShopPage() {
+function ShopContent() {
   const searchParams = useSearchParams()
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategories, setSelectedCategories] = useState<string[]>([])
@@ -331,5 +331,13 @@ export default function ShopPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function ShopPage() {
+  return (
+    <Suspense fallback={<div className="container mx-auto px-4 py-8">Loading shop...</div>}>
+      <ShopContent />
+    </Suspense>
   )
 }

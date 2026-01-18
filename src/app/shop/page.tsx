@@ -254,7 +254,7 @@ function ShopContent() {
           {/* Sort */}
           <div className="flex gap-2">
             <Select value={sortBy} onValueChange={setSortBy}>
-              <SelectTrigger className="w-[140px]">
+              <SelectTrigger className="w-35">
                 <SelectValue placeholder="Sort by" />
               </SelectTrigger>
               <SelectContent>
@@ -292,7 +292,7 @@ function ShopContent() {
       {/* Main content */}
       <div className="flex gap-8">
         {/* Filters sidebar - desktop */}
-        <aside className="hidden md:block w-64 flex-shrink-0">
+        <aside className="hidden md:block w-64 shrink-0">
           <ProductFilters
             categories={categories}
             priceRange={selectedPriceRange}

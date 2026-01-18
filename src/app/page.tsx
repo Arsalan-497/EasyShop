@@ -120,7 +120,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary/10 via-background to-primary/5 py-16 md:py-24 lg:py-32">
+      <section className="relative bg-linear-to-br from-primary/10 via-background to-primary/5 py-16 md:py-24 lg:py-32">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <Badge variant="secondary" className="text-sm">
@@ -209,7 +209,7 @@ export default function HomePage() {
                 <Card className="overflow-hidden hover:shadow-lg transition-all cursor-pointer">
                   <CardContent className="p-0">
                     <div className="aspect-square bg-muted relative">
-                      <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary/20 to-primary/5 group-hover:from-primary/30 group-hover:to-primary/10 transition-all">
+                      <div className="absolute inset-0 flex items-center justify-center bg-linear-to-br from-primary/20 to-primary/5 group-hover:from-primary/30 group-hover:to-primary/10 transition-all">
                         <div className="text-center space-y-2">
                           <div className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-background shadow-lg">
                             <Package className="h-8 w-8 text-primary" />
@@ -332,7 +332,7 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
-          <Card className="bg-gradient-to-br from-primary to-primary/80 border-none">
+          <Card className="bg-linear-to-br from-primary to-primary/80 border-none">
             <CardContent className="p-8 md:p-12 text-center space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground">
                 Ready to Start Shopping?

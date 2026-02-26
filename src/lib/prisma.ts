@@ -1,14 +1,10 @@
-import { PrismaClient } from '@prisma/client'
+import { db } from './db'
 
-const globalForPrisma = globalThis as unknown as {
-  prisma: PrismaClient | undefined
-}
-
-export const prisma = globalForPrisma.prisma ?? new PrismaClient()
-
-if (process.env.NODE_ENV !== 'production') {
-  globalForPrisma.prisma = prisma
-}
-
-// Also export as db for compatibility
-export const db = prisma
+/**
+ * Backward-compatible Prisma export.
+ *
+ * Prefer importing `db` from `@/lib/db` in new code.
+ * This file exists to avoid breaking legacy imports of `@/lib/prisma`.
+ */
+export const prisma = db
+export { db }

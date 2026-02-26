@@ -1,5 +1,2 @@
-import { defineConfig } from '@prisma/client'
-
-export default defineConfig({
-  datasourceUrl: process.env.DATABASE_URL,
-})
+// Prisma configuration is managed through prisma/schema.prisma.
+// Keep this placeholder to avoid accidental imports of unsupported helpers.

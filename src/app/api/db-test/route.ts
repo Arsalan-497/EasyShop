@@ -1,15 +1,15 @@
 import { NextResponse } from 'next/server'
-import { prisma } from '@/lib/prisma'
+import { db } from '@/lib/db'
 
 export async function GET() {
   try {
     // Test database connection
-    await prisma.$connect()
+    await db.$connect()
     
     // Get counts from database
-    const categories = await prisma.category.count()
-    const products = await prisma.product.count()
-    const users = await prisma.user.count()
+    const categories = await db.category.count()
+    const products = await db.product.count()
+    const users = await db.user.count()
     
     return NextResponse.json({
       connected: true,
